@@ -1,0 +1,11 @@
+D:\source\repos\Database\bin\Debug\net6.0\publish\Database.exe
+D:\source\repos\Database\bin\Debug\net6.0\publish\appsettings.Development.json
+D:\source\repos\Database\bin\Debug\net6.0\publish\appsettings.json
+D:\source\repos\Database\bin\Debug\net6.0\publish\Database.dll
+D:\source\repos\Database\bin\Debug\net6.0\publish\Database.deps.json
+D:\source\repos\Database\bin\Debug\net6.0\publish\Database.runtimeconfig.json
+D:\source\repos\Database\bin\Debug\net6.0\publish\Database.pdb
+D:\source\repos\Database\bin\Debug\net6.0\publish\Microsoft.OpenApi.dll
+D:\source\repos\Database\bin\Debug\net6.0\publish\Swashbuckle.AspNetCore.Swagger.dll
+D:\source\repos\Database\bin\Debug\net6.0\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\source\repos\Database\bin\Debug\net6.0\publish\Swashbuckle.AspNetCore.SwaggerUI.dll
