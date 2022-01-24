@@ -4,12 +4,14 @@ namespace Database.Settings
     {
         public string Host{get; set;}
         public int Port{get; set;}
+        public string User{get; set;}
+        public string Password{get; set;}
 
         public string ConnectionString
         {
             get
             {
-                return $"mongodb://{Host}:{Port}"; // easy way to grab connection string from populated host and port
+                return $"mongodb://{User}:{Password}@{Host}:{Port}"; // easy way to grab connection string from populated host and port
             }
         }
     }

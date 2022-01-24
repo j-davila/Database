@@ -26,13 +26,17 @@ builder.Services.AddSwaggerGen();
 BsonSerializer.RegisterSerializer(new GuidSerializer(BsonType.String));
 BsonSerializer.RegisterSerializer(new DateTimeOffsetSerializer(BsonType.String));
 
+var mongoDbSettings = startup.Configuration.GetSection(nameof(MongoDbSettings)).Get<MongoDbSettings>();
+
 builder.Services.AddSingleton<IMongoClient>(ServiceProvider => 
 {
-   var settings = startup.Configuration.GetSection(nameof(MongoDbSettings)).Get<MongoDbSettings>();
-   return new MongoClient(settings.ConnectionString);
+   return new MongoClient(mongoDbSettings.ConnectionString);
 });
 
 builder.Services.AddSingleton<IItemsRepository, MongoDBRepository>(); // registering dependency
+
+builder.Services.AddHealthChecks()
+    .AddMongoDb(mongoDbSettings.ConnectionString, name:"mongodb", timeout:TimeSpan.FromSeconds(3), tags: new[]{"ready"});
 
 var app = builder.Build();
 
