@@ -4,10 +4,10 @@ namespace Database.Repositories
 {
     public interface IItemsRepository
     {
-        Item GetItem(Guid id);
-        IEnumerable<Item> GetItems();
-        void CreateItem(Item item); // receives the item that needs to be created in the repository
-        void UpdateItem(Item item);
-        void DeleteItem(Guid id);
+        Task<Item> GetItemAsync(Guid id);
+        Task<IEnumerable<Item>> GetItemsAsync();
+        Task CreateItemAsync(Item item); // receives the item that needs to be created in the repository
+        Task UpdateItemAsync(Item item);
+        Task DeleteItemAsync(Guid id);
     }
 }
