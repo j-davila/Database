@@ -7,7 +7,7 @@ using Database.Dtos;
 namespace Database.Controllers
 {
     [ApiController]
-    [Route("[controller]")] // which http route this controller will be respoding
+    [Route("items")] // which http route this controller will be respoding
     public class ItemsController : ControllerBase // always inherit from controllerbase to convert class to controller class
     {
         private readonly IItemsRepository repository;
